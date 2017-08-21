@@ -14,9 +14,9 @@
 '''fixedlinesspout.py: module that implements a very simple Spout that emits
    a bunch of fixed lines'''
 
-from heron.api.src.python.spout.spout import Spout
+from heronpy.api.spout.spout import Spout
 
-from heron.dsl.src.python.dslboltbase import DslBoltBase
+from heronpy.dsl.dslboltbase import DslBoltBase
 
 class FixedLinesSpout(Spout, DslBoltBase):
   """FixedLinesSpout: Generates a line from a set of static lines again and again

@@ -14,9 +14,9 @@
 '''base_spout.py'''
 import copy
 
-from heron.api.src.python.component.component_spec import HeronComponentSpec
-from heron.api.src.python.component.base_component import BaseComponent
-from heron.api.src.python.stream import Stream
+from heronpy.api.component.component_spec import HeronComponentSpec
+from heronpy.api.component.base_component import BaseComponent
+from heronpy.api.stream import Stream
 
 class BaseSpout(BaseComponent):
   """BaseSpout class

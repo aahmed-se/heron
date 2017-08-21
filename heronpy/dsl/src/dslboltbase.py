@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """module for base dsl bolt: DslBoltBase"""
-from heron.api.src.python.stream import Stream
+from heronpy.api.stream import Stream
 
 class DslBoltBase(object):
   """DslBoltBase"""

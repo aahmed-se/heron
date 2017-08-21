@@ -18,10 +18,10 @@ import tempfile
 
 import pulsar
 
-import heron.api.src.python.api_constants as api_constants
-from heron.api.src.python.spout.spout import Spout
+import heronpy.api.api_constants as api_constants
+from heronpy.api.spout.spout import Spout
 
-from heron.dsl.src.python.dslboltbase import DslBoltBase
+from heronpy.dsl.dslboltbase import DslBoltBase
 
 def GenerateLogConfContents(logFileName):
   return """

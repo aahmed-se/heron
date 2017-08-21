@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """module for map bolt: MapBolt"""
-from heron.api.src.python.bolt.bolt import Bolt
-from heron.api.src.python.state.stateful_component import StatefulComponent
-from heron.api.src.python.component.component_spec import GlobalStreamId
-from heron.api.src.python.stream import Grouping
+from heronpy.api.bolt.bolt import Bolt
+from heronpy.api.state.stateful_component import StatefulComponent
+from heronpy.api.component.component_spec import GlobalStreamId
+from heronpy.api.stream import Grouping
 
-from heron.dsl.src.python.streamlet import Streamlet
-from heron.dsl.src.python.dslboltbase import DslBoltBase
+from heronpy.dsl.streamlet import Streamlet
+from heronpy.dsl.dslboltbase import DslBoltBase
 
 # pylint: disable=unused-argument
 class MapBolt(Bolt, StatefulComponent, DslBoltBase):

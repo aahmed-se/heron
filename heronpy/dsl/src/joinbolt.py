@@ -14,13 +14,13 @@
 """module for join bolt: JoinBolt"""
 import collections
 
-from heron.api.src.python.bolt.window_bolt import SlidingWindowBolt
-from heron.api.src.python.component.component_spec import GlobalStreamId
-from heron.api.src.python.custom_grouping import ICustomGrouping
-from heron.api.src.python.stream import Grouping
+from heronpy.api.bolt.window_bolt import SlidingWindowBolt
+from heronpy.api.component.component_spec import GlobalStreamId
+from heronpy.api.custom_grouping import ICustomGrouping
+from heronpy.api.stream import Grouping
 
-from heron.dsl.src.python.streamlet import Streamlet, TimeWindow
-from heron.dsl.src.python.dslboltbase import DslBoltBase
+from heronpy.dsl.streamlet import Streamlet, TimeWindow
+from heronpy.dsl.dslboltbase import DslBoltBase
 
 # pylint: disable=unused-argument
 class JoinBolt(SlidingWindowBolt, DslBoltBase):
@@ -73,7 +73,7 @@ class JoinStreamlet(Streamlet):
     inputs = {}
     for parent in self._parents:
       inputs[GlobalStreamId(parent._stage_name, parent._output)] = \
-             Grouping.custom("heron.dsl.src.python.joinbolt.JoinGrouping")
+             Grouping.custom("heronpy.dsl.joinbolt.JoinGrouping")
     return inputs
 
   def _calculate_stage_name(self, existing_stage_names):
