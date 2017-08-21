@@ -14,12 +14,12 @@
 '''metrics manager client'''
 import socket
 
-from heron.common.src.python.config import system_config
-from heron.common.src.python.utils.log import Log
-from heron.common.src.python.network import HeronClient, StatusCode
-from heron.proto import metrics_pb2, common_pb2
+from heronpy.common.config import system_config
+from heronpy.common.utils.log import Log
+from heronpy.common.network import HeronClient, StatusCode
+from heronpy.proto import metrics_pb2, common_pb2
 
-import heron.common.src.python.system_constants as constants
+import heronpy.common.system_constants as constants
 
 class MetricsManagerClient(HeronClient):
   """MetricsManagerClient, responsible for communicating with Metrics Manager"""
