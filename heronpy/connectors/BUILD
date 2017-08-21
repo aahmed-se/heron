@@ -4,7 +4,7 @@ load("/tools/rules/pex_rules", "pex_library", "pex_binary")
 
 pex_library(
     name = "heron-pythonconnectors-py",
-    srcs = glob(["src/**/*.py"]),
+    srcs = glob(["**/*.py"], exclude = [ "**/tests/**"]),
     deps = [
         "//heronpy/api:heron-python-py",
     ],
@@ -15,7 +15,7 @@ pex_library(
 # for egg production
 pex_binary(
     name = "heron-pythonconnectors-package",
-    srcs = glob(["src/**/*.py"]),
+    srcs = glob(["**/*.py"], exclude = [ "**/tests/**"]),
     deps = [
         "//heronpy/api:heron-python-py",
     ]

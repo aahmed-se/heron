@@ -4,7 +4,7 @@ load("/tools/rules/pex_rules", "pex_library")
 
 pex_library(
     name = 'common-py',
-    srcs = glob(['src/**/*.py']),
+    srcs = glob(["**/*.py"], exclude = [ "**/tests/**"]),
     deps = [
         '//heronpy/proto:proto-py',
         '//heronpy/api:heron-python-py',
