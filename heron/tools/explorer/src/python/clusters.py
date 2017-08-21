@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ''' clusters.py '''
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 import heron.tools.explorer.src.python.args as args
 import heron.tools.common.src.python.access.tracker_access as tracker_access
 

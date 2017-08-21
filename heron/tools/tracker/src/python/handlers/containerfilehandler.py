@@ -16,7 +16,7 @@ import json
 import traceback
 import tornado.gen
 
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 from heron.tools.tracker.src.python.handlers import BaseHandler
 from heron.tools.tracker.src.python import constants
 from heron.tools.tracker.src.python import utils

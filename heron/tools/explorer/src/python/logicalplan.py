@@ -13,7 +13,7 @@
 # limitations under the License.
 ''' logicalplan.py '''
 from collections import defaultdict
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 import heron.tools.explorer.src.python.args as args
 import heron.tools.common.src.python.access.tracker_access as tracker_access
 from tabulate import tabulate

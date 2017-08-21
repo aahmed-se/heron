@@ -15,7 +15,7 @@
 
 import os
 
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 
 def valid_path(path):
   '''

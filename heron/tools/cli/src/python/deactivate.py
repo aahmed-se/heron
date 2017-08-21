@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ''' deactivate.py '''
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 import heron.tools.cli.src.python.cli_helper as cli_helper
 
 def create_parser(subparsers):

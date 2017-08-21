@@ -17,7 +17,7 @@ import tornado.gen
 import tornado.ioloop
 
 from heron.tools.common.src.python.access import heron_api as API
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 
 def _all_metric_queries():
   queries_normal = ['complete-latency',

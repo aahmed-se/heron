@@ -21,7 +21,7 @@ import tornado.gen
 import base
 import common
 import heron.tools.common.src.python.access as access
-import heron.common.src.python.utils.log as log
+import heronpy.common.utils.log as log
 
 Log = log.Log
 

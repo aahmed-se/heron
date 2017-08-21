@@ -14,7 +14,7 @@
 """Streamlet for Apache Pulsar"""
 
 from heronpy.dsl.streamlet import Streamlet
-from heron.connectors.pulsar.src.python.pulsarspout import PulsarSpout
+from heronpy.connectors.pulsar import PulsarSpout
 
 # pylint: disable=access-member-before-definition
 # pylint: disable=attribute-defined-outside-init

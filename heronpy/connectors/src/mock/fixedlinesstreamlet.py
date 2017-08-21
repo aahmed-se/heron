@@ -14,7 +14,7 @@
 '''fixedlinesstreamlet.py: module for defining a Streamlet based on FixedLinesSpout'''
 
 from heronpy.dsl.streamlet import Streamlet
-from heron.connectors.mock.src.python.fixedlinesspout import FixedLinesSpout
+from heronpy.connectors.mockfixedlinesspout import FixedLinesSpout
 
 # pylint: disable=access-member-before-definition
 # pylint: disable=attribute-defined-outside-init

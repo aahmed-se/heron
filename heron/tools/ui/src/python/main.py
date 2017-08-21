@@ -28,7 +28,7 @@ from tornado.httpclient import AsyncHTTPClient
 from tornado.options import define
 from tornado.web import url
 
-import heron.common.src.python.utils.log as log
+import heronpy.common.utils.log as log
 import heron.tools.common.src.python.utils.config as common_config
 from heron.tools.ui.src.python import handlers
 from heron.tools.ui.src.python import args
