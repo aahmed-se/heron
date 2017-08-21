@@ -14,7 +14,7 @@ pex_library(
         "tornado==4.0.2",
     ],
     deps = [
-        "//heron/common/src/python:common-py",
+        "//heronpy/common:common-py",
         "//heron/tools/common/src/python:common-py",
         "//heron/tools/common/src/python:tracker-py",
     ]

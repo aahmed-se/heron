@@ -20,7 +20,7 @@ relevant for dealing with the topology structure
 import sets
 
 from heron.api.src.python import api_constants
-from heron.common.src.python import system_constants
+from heronpy.common import system_constants
 from heron.proto import topology_pb2
 
 def get_topology_config(topology, key):

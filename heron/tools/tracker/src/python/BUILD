@@ -9,11 +9,11 @@ pex_library(
         exclude = ["main.py"],
     ),
     deps = [
-        "//heron/common/src/python:common-py",
-        "//heron/api/src/python:heron-python-py",
+        "//heronpy/common:common-py",
+        "//heronpy/api:heron-python-py",
         "//heron/tools/common/src/python:common-py",
         "//heron/statemgrs/src/python:statemgr-py",
-        "//heron/proto:proto-py",
+        "//heronpy/proto:proto-py",
     ],
     reqs = [
         "protobuf==2.5.0",

@@ -16,8 +16,8 @@ import abc
 import sys
 from enum import Enum
 
-from heron.common.src.python.utils import proc
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils import proc
+from heronpy.common.utils.log import Log
 
 # Meaning of exit status code:
 #  - status code = 0:

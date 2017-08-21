@@ -23,7 +23,7 @@ import tarfile
 import tempfile
 import yaml
 
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 
 # pylint: disable=logging-not-lazy
 

@@ -34,8 +34,8 @@ import traceback
 
 from functools import partial
 
-from heron.common.src.python.utils import log
-from heron.common.src.python.utils import proc
+from heronpy.common.utils import log
+from heronpy.common.utils import proc
 # pylint: disable=unused-import
 from heron.proto.packing_plan_pb2 import PackingPlan
 from heron.statemgrs.src.python import statemanagerfactory

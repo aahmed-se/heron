@@ -14,7 +14,7 @@
 """ metricstimeline.py """
 import tornado.gen
 
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 from heron.proto import common_pb2
 from heron.proto import tmaster_pb2
 

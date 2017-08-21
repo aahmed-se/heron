@@ -16,7 +16,7 @@ import traceback
 import tornado.gen
 import tornado.web
 
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 from heron.proto import common_pb2
 from heron.proto import tmaster_pb2
 from heron.tools.tracker.src.python import constants

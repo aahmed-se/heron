@@ -6,11 +6,11 @@ pex_library(
     name = "explorer-py",
     srcs = glob(["**/*.py"],),
     deps = [
-        "//heron/common/src/python:common-py",
+        "//heronpy/common:common-py",
         "//heron/tools/common/src/python:common-py",
         "//heron/tools/common/src/python:tracker-py",
         "//heron/statemgrs/src/python:statemgr-py",
-        "//heron/proto:proto-py",
+        "//heronpy/proto:proto-py",
     ],
     reqs = [
         "tornado==4.0.2",

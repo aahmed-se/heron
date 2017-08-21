@@ -20,23 +20,23 @@ import traceback
 import signal
 import yaml
 
-import heron.api.src.python.api_constants as api_constants
-from heron.api.src.python.state.state import HashMapState
+import heronpy.api.api_constants as api_constants
+from heronpy.api.state.state import HashMapState
 
-from heron.common.src.python.basics import GatewayLooper
-from heron.common.src.python.config import system_config
-from heron.common.src.python.utils import log
-from heron.common.src.python.utils.metrics import GatewayMetrics, PyMetrics, MetricsCollector
-from heron.common.src.python.utils.misc import HeronCommunicator
-from heron.common.src.python.utils.misc import SerializerHelper
-from heron.common.src.python.utils.misc import PhysicalPlanHelper
-from heron.common.src.python.network import create_socket_options
+from heronpy.common.basics import GatewayLooper
+from heronpy.common.config import system_config
+from heronpy.common.utils import log
+from heronpy.common.utils.metrics import GatewayMetrics, PyMetrics, MetricsCollector
+from heronpy.common.utils.misc import HeronCommunicator
+from heronpy.common.utils.misc import SerializerHelper
+from heronpy.common.utils.misc import PhysicalPlanHelper
+from heronpy.common.network import create_socket_options
 
-from heron.proto import physical_plan_pb2, tuple_pb2, ckptmgr_pb2, common_pb2
+from heronpy.proto import physical_plan_pb2, tuple_pb2, ckptmgr_pb2, common_pb2
 from heron.instance.src.python.network import MetricsManagerClient, SingleThreadStmgrClient
 from heron.instance.src.python.basics import SpoutInstance, BoltInstance
 
-import heron.common.src.python.system_constants as constants
+import heronpy.common.system_constants as constants
 
 Log = log.Log
 AssignedInstance = collections.namedtuple('AssignedInstance', 'is_spout, protobuf, py_class')

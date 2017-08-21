@@ -21,7 +21,7 @@ import heron.tools.cli.src.python.execute as execute
 import heron.tools.cli.src.python.jars as jars
 import heron.tools.cli.src.python.rest as rest
 
-from heron.common.src.python.utils.log import Log
+from heronpy.common.utils.log import Log
 
 ################################################################################
 def create_parser(subparsers, action, help_arg):

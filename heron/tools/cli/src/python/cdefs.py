@@ -15,7 +15,7 @@
 import os
 import yaml
 
-import heron.common.src.python.utils.log as Log
+import heronpy.common.utils.log as Log
 import heron.tools.common.src.python.utils.config as config
 
 ################################################################################

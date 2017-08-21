@@ -19,7 +19,7 @@ import os
 import re
 import sys
 
-from  heron.common.src.python.utils.log import Log
+from  heronpy.common.utils.log import Log
 import heron.tools.common.src.python.utils.config as config
 
 ##########################################################################

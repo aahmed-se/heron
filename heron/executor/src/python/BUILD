@@ -7,7 +7,7 @@ pex_library(
     srcs = ["heron_executor.py"],
     deps = [
         "//heron/statemgrs/src/python:statemgr-py",
-        "//heron/common/src/python:common-py",
+        "//heronpy/common:common-py",
     ],
     reqs = ["PyYAML==3.10"],
 )

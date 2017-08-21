@@ -172,7 +172,7 @@ java_library(
     ],
 )
 
-# This is for binaries that don't want protobuf 
+# This is for binaries that don't want protobuf
 # dependency to be included in the generated jar
 java_library(
     name = "proto-java-nl",
@@ -203,28 +203,6 @@ java_binary(
     create_executable = 0,
     deps = [
         ":proto-java-nl",
-    ],
-)
-
-pex_library(
-    name = "proto-py",
-    deps = [
-        ":proto_common_py",
-        ":proto_execution_state_py",
-        ":proto_stats_py",
-        ":proto_topology_py",
-        ":proto_scheduler_py",
-        ":proto_packing_plan_py",
-        ":proto_physical_plan_py",
-        ":proto_metrics_py",
-        ":proto_tmaster_py",
-        ":proto_tuple_py",
-        ":proto_stmgr_py",
-        ":proto_ckptmgr_py",
-    ],
-    reqs = [
-        "protobuf==2.5.0",
-        "setuptools==18.0.1",
     ],
 )
 

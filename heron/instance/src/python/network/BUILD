@@ -6,7 +6,7 @@ pex_library(
     name = "heron-network-py",
     srcs = glob(["**/*.py"]),
     deps = [
-        "//heron/common/src/python:common-py",
-        "//heron/proto:proto-py",
+        "//heronpy/common:common-py",
+        "//heronpy/proto:proto-py",
     ],
 )

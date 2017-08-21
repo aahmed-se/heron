@@ -353,10 +353,10 @@ pkg_tar(
 
 ################################################################################
 # Heron python packaging
-# 
-# When a new python module is being added into the heronpy package, please ensure 
+#
+# When a new python module is being added into the heronpy package, please ensure
 # that its dependencies are being added into the packaging as well. Sometimes,
-# the dependencies might already exist. For example, 
+# the dependencies might already exist. For example,
 #   heron/api depends on proto
 #   heron/dsl depends on proto and heron/api
 #
@@ -367,7 +367,7 @@ pkg_tar(
 genrule(
     name = "generate-heronpy-package",
     srcs = [
-        "heronpy/requirements.txt", 
+        "heronpy/requirements.txt",
         "heronpy/setup.py.template",
         "heronpy/README.txt",
         "heronpy/__apiinit__.py.template",
@@ -377,9 +377,9 @@ genrule(
     outs = generated_heronpy_egg_file,
     stamp = 1,
     tools = [
-        "//heron/api/src/python:heron-python-package",
-        "//heron/dsl/src/python:heron-pythondsl-package",
-        "//heron/connectors:heron-pythonconnectors-package",
+        "//heronpy/api:heron-python-package",
+        "//heronpy/dsl:heron-pythondsl-package",
+        "//heronpy/connectors:heron-pythonconnectors-package",
     ],
     cmd = "\n".join([
         'export OUTPUT_DIR=$$(pwd)/$(@D)',
@@ -396,9 +396,9 @@ genrule(
         'export HERON_VERSION=$$([[ -z $$HERON_VERSION ]] && echo "0.0.0" || echo $$HERON_VERSION)',
         'echo $$HERON_VERSION',
         'mkdir -p $$TMP_DIR $$HERONPY_DIR',
-        'unzip -qd $$HERONPYAPI_UNZIP $(location //heron/api/src/python:heron-python-package)',
-        'unzip -qd $$HERONPYDSL_UNZIP $(location //heron/dsl/src/python:heron-pythondsl-package)',
-        'unzip -qd $$HERONPYCONNECTORS_UNZIP $(location //heron/connectors:heron-pythonconnectors-package)',
+        'unzip -qd $$HERONPYAPI_UNZIP $(location //heronpy/api:heron-python-package)',
+        'unzip -qd $$HERONPYDSL_UNZIP $(location //heronpy/dsl:heron-pythondsl-package)',
+        'unzip -qd $$HERONPYCONNECTORS_UNZIP $(location //heronpy/connectors:heron-pythonconnectors-package)',
         'find $$HERONPYAPI_UNZIP -name "*.pyc" -exec rm {} \;',
         'find $$HERONPYDSL_UNZIP -name "*.pyc" -exec rm {} \;',
         'find $$HERONPYCONNECTORS_UNZIP -name "*.pyc" -exec rm {} \;',
@@ -408,9 +408,9 @@ genrule(
         'mv $$HERONPYAPI_UNZIP/heron $$HERONPY_DIR',
         'mv $$HERONPYDSL_UNZIP/heron/dsl $$HERONPY_DIR/heron',
         'mv $$HERONPYCONNECTORS_UNZIP/heron/connectors $$HERONPY_DIR/heron',
-        'rm -rf $$HERONPYAPI_UNZIP/heron/api',
-        'rm -rf $$HERONPYDSL_UNZIP/heron/dsl',
-        'rm -rf $$HERONPYCONNECTORS_UNZIP/heron/connectors',
+        'rm -rf $$HERONPYAPI_UNZIP/heronpy/api',
+        'rm -rf $$HERONPYDSL_UNZIP/heronpy/dsl',
+        'rm -rf $$HERONPYCONNECTORS_UNZIP/heronpy/connectors',
         'cp $(SRCS) $$HERONPY_DIR',
         'mv -f $$HERONPY_DIR/__apiinit__.py.template $$HERONPY_DIR/heronpy/__init__.py',
         'mv -f $$HERONPY_DIR/__dslinit__.py.template $$HERONPY_DIR/heronpy/dsl/__init__.py',

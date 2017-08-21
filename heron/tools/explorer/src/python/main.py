@@ -18,7 +18,7 @@ import argparse
 import sys
 import time
 
-import heron.common.src.python.utils.log as log
+import heronpy.common.utils.log as log
 import heron.tools.common.src.python.utils.config as config
 import heron.tools.explorer.src.python.args as parse
 import heron.tools.explorer.src.python.clusters as clusters

@@ -3,7 +3,7 @@
 import unittest2 as unittest
 
 from heron.api.src.python import api_constants
-from heron.common.src.python import system_constants
+from heronpy.common import system_constants
 from heron.tools.tracker.src.python import topology_helpers
 from mock_proto import MockProto
 

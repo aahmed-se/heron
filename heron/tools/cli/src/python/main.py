@@ -23,7 +23,7 @@ import sys
 import time
 import traceback
 
-import heron.common.src.python.utils.log as log
+import heronpy.common.utils.log as log
 import heron.tools.common.src.python.utils.config as config
 import heron.tools.cli.src.python.cdefs as cdefs
 import heron.tools.cli.src.python.help as cli_help

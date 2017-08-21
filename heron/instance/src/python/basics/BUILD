@@ -6,9 +6,9 @@ pex_library(
    name = "heron-basics-py",
    srcs = glob(["**/*.py"]),
    deps = [
-       "//heron/common/src/python:common-py",
-       "//heron/api/src/python:heron-python-py",
-       "//heron/proto:proto-py",
+       "//heronpy/common:common-py",
+       "//heronpy/api:heron-python-py",
+       "//heronpy/proto:proto-py",
    ],
    reqs = ['colorlog==2.6.1', 'PyYAML==3.10'],
 )

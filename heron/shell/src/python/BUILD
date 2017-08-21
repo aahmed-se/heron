@@ -8,7 +8,7 @@ pex_library(
         ["**/*.py"],
     ),
     deps = [
-        "//heron/common/src/python:common-py",
+        "//heronpy/common:common-py",
     ],
     reqs = [
         "requests==2.11.1",
