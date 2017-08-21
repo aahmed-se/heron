@@ -6,7 +6,7 @@ pex_library(
     name = "heron-pythonconnectors-py",
     srcs = glob(["src/**/*.py"]),
     deps = [
-        "//heron/api/src/python:heron-python-py",
+        "//heronpy/api:heron-python-py",
     ],
     # TODO:- We should turn this on as soon as bazel issues are resolved
     # reqs = ['pulsar-client==1.19.dev2']
@@ -17,7 +17,7 @@ pex_binary(
     name = "heron-pythonconnectors-package",
     srcs = glob(["src/**/*.py"]),
     deps = [
-        "//heron/api/src/python:heron-python-py",
+        "//heronpy/api:heron-python-py",
     ]
 )
 
