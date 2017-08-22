@@ -1,7 +1,7 @@
 package(default_visibility = ["//visibility:public"])
 
 load("/tools/rules/genproto",  "proto_library")
-load("/tools/rules/pex_rules", "pex_library")
+load("/tools/rules/pex_rules", "pex_library", "pex_binary")
 
 pex_library(
     name = "proto-py",
@@ -23,4 +23,13 @@ pex_library(
         "protobuf==2.5.0",
         "setuptools==18.0.1",
     ],
+)
+
+# for egg production
+pex_binary(
+    name = "proto-py-package",
+    srcs = glob(["**/*.py"]),
+    deps = [
+        ":proto-py",
+    ]
 )
