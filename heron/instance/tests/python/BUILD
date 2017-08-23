@@ -6,6 +6,8 @@ pex_library(
     srcs = ["mock_protobuf.py"],
     deps = [
       "//heron/common/src/python:common-py",
+      "//heron/instance/src/python:instance-py",
+      "//heron/api/src/python:heron-python-py",
     ],
     reqs = [
         "py==1.4.27",
